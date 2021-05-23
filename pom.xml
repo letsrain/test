@@ -14,7 +14,7 @@
     <name>demo</name>
     <description>Demo project for Spring Boot</description>
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -31,7 +31,19 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.github.galimru</groupId>
+            <artifactId>viber-bot</artifactId>
+            <version>2.0.0</version>
+        </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
@@ -39,28 +51,22 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-                 
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-dependency-plugin</artifactId>
-            <executions>
-                <execution>
-                    <phase>package</phase>
-                    <goals><goal>copy</goal></goals>
-                    <configuration>
-                        <artifactItems>
-                            <artifactItem>
-                                <groupId>com.heroku</groupId>
-                                <artifactId>webapp-runner</artifactId>
-                                <version>9.0.41.0</version>
-                                <destFileName>webapp-runner.jar</destFileName>
-                            </artifactItem>
-                        </artifactItems>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
-  
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

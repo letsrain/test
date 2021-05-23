@@ -32,7 +32,6 @@ import java.io.InputStreamReader;
 import java.util.Optional;
 import java.util.concurrent.ExecutionException;
 
-@RestController
 @SpringBootApplication
 public class DemoApplication {
 
@@ -40,9 +39,9 @@ public class DemoApplication {
 
     ViberBot viberBot = new ViberBot("My Bot", "<AUTH_TOKEN>");
     // start server on 8080 port with path /callback
-//         viberBot.listen("/");
-//     // let Viber API know about webhook url
-//         viberBot.setWebhook("https://test-vbbot.herokuapp.com/");
+//        viberBot.listen("/");
+    // let Viber API know about webhook url
+//        viberBot.setWebhook("https://test-vbbot.herokuapp.com/");
     // subscribes on message events
         viberBot.addMessageListener((event, response) -> {
         Message message = event.getMessage();
