@@ -39,12 +39,13 @@ public class DemoApplication {
 
     ViberBot viberBot = new ViberBot("CreditsBot", "4d6643958767dc47-2d470f6727ff1975-d8b9cabe2682ea08");
 
-    viberBot.setWebhook("");
+   
 
 
     // start server on 8080 port with path /callback
         viberBot.listen("/callback");
     // let Viber API know about webhook url
+         viberBot.setWebhook("");
         viberBot.setWebhook("https://test-vbbot.herokuapp.com/callback");
     // subscribes on message events
         viberBot.addMessageListener((event, response) -> {
