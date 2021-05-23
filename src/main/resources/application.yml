@@ -1,0 +1,15 @@
+server:
+  port: 8080
+#  ssl:
+#    enabled: true
+#    key-alias: test
+#    key-store: "path/to/cert.jks"
+#    key-store-password: "password"
+
+application.viber-bot:
+  auth-token: "4d6643958767dc47-2d470f6727ff1975-d8b9cabe2682ea08"
+  webhook-url: "https://test-vbbot.herokuapp.com/"
+  name: "CreditsBot"
+  avatar: "https://i.pinimg.com/originals/82/e6/7c/82e67c686a6f80321455b3d016def273.jpg"
+
+logging.level.com.viber: DEBUG
