@@ -1,1 +1,1 @@
-bot: java -cp target/demo-0.0.1-SNAPSHOT.jar DemoApplication
+web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar target/*.war
