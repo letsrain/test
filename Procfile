@@ -1,1 +1,1 @@
-bot: java -cp target/classes/;target/dependency/* com.example.demo.DemoApplication
+bot: java -cp target/classes/ com.example.demo.DemoApplication
