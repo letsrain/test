@@ -37,7 +37,8 @@ public class DemoApplication {
 
     public static void test() throws IOException{
 
-    ViberBot viberBot = new ViberBot("My Bot", "<AUTH_TOKEN>");
+        ViberBot viberBot = new ViberBot("CreditsBot", "4d6643958767dc47-2d470f6727ff1975-d8b9cabe2682ea08");
+
     // start server on 8080 port with path /callback
 //        viberBot.listen("/");
     // let Viber API know about webhook url
